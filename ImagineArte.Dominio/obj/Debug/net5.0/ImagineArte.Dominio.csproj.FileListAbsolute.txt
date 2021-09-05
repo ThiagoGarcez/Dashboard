@@ -1,0 +1,12 @@
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\bin\Debug\net5.0\ImagineArte.Dominio.deps.json
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\bin\Debug\net5.0\ImagineArte.Dominio.dll
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\bin\Debug\net5.0\ref\ImagineArte.Dominio.dll
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\bin\Debug\net5.0\ImagineArte.Dominio.pdb
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.csproj.AssemblyReference.cache
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.AssemblyInfoInputs.cache
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.AssemblyInfo.cs
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.dll
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ref\ImagineArte.Dominio.dll
+C:\Users\thiag\source\repos\DashBoard.Api\ImagineArte.Dominio\obj\Debug\net5.0\ImagineArte.Dominio.pdb
