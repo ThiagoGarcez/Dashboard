@@ -47,7 +47,7 @@ namespace DashBoard.Api.Controllers
             }
         }
 
-        [HttpPost("adcionrMarca/")]
+        [HttpPost("adicionarMarca/")]
         public ActionResult<RespostaPadraoDTO> AdicionarMarca(MarcaDTO marca)
         {
             try
@@ -67,6 +67,20 @@ namespace DashBoard.Api.Controllers
             try
             {
                 var resposta = _marcaAplicacao.Atualizar(marca);
+                return Ok(resposta);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("removerMarca/{marcaId}")]
+        public ActionResult<RespostaPadraoDTO> RemoverMarca(long marcaId)
+        {
+            try
+            {
+                var resposta = _marcaAplicacao.Remover(marcaId);
                 return Ok(resposta);
             }
             catch (Exception ex)

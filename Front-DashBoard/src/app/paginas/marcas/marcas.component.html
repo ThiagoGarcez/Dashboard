@@ -9,14 +9,19 @@
           </div>
           <div class="card-body">
             <div class="table-responsive table-hover">
-              <button mat-raised-button class="btn btn-primary" >
+              <button
+                mat-raised-button
+                class="btn btn-primary"
+                (click)="adicionarMarca()"
+              >
                 Adcionar Marca
               </button>
               <hr />
               <table class="table" style="width: 100%">
-                <thead class="text-primary">    
+                <thead class="text-primary">
                   <th>ID</th>
                   <th>Nome</th>
+                  <th>Logomarca</th>
                   <th></th>
                 </thead>
                 <tbody>
@@ -27,9 +32,36 @@
                     <td>
                       {{ marca.nome }}
                     </td>
+                    <td>
+                      <img
+                        alt="imagem da logomarca"
+                        class="logomarca"
+                        [src]="marca.urlLogomarca"
+                      />
+                    </td>
                     <td style="float: right">
-                      <button class="btn btn-info" >Editar</button>
-                      <button class="btn btn-warning">Inativar</button>
+                      <button
+                        class="btn btn-info"
+                        (click)="editarMarca(marca.id)"
+                      >
+                        Editar
+                      </button>
+                      <button
+                        class="btn btn-danger"
+                        [swal]="{
+                          title: 'Save file as...',
+                          input: 'text',
+                          showDenyButton: true,
+                          denyButtonText: 'Don\'t save',
+                          showCancelButton: true
+                        }"
+                        (confirm)="removerMarca(marca.id)"
+                      >
+                        Remover
+                      </button>
+                      <button [swal]="['Oops!', 'This is not implemented yet :/', 'warning']">
+                        Do it!
+                      </button>
                     </td>
                   </tr>
                 </tbody>
