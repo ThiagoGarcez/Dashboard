@@ -1,0 +1,39 @@
+<div class="modal-header">
+  <h4 class="modal-title">Cadastro de Marca</h4>
+  <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <form [formGroup]="marcaForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" placeholder="Nome da marca" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Url da logomarca</mat-label>
+        <input
+          matInput
+          formControlName="urlLogomarca"
+          placeholder="Url da logomarca"
+        />
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button
+    *ngIf="btnCancelText"
+    type="button"
+    class="btn btn-danger"
+    (click)="decline()"
+  >
+    {{ btnCancelText }}
+  </button>
+  <button type="button" class="btn btn-success" (click)="accept()">
+    {{ btnOkText }}
+  </button>
+</div>

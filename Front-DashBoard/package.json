@@ -31,6 +31,7 @@
     "@angular/platform-server": "12.1.2",
     "@angular/router": "12.1.2",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "ajv": "8.6.1",
     "arrive": "2.4.1",
     "bootstrap": "4.5.2",
@@ -50,6 +51,7 @@
     "popper.js": "1.16.1",
     "rxjs": "6.6.3",
     "rxjs-compat": "6.6.3",
+    "sweetalert2": "^11.3.0",
     "web-animations-js": "2.3.2",
     "zone.js": "0.11.4"
   },

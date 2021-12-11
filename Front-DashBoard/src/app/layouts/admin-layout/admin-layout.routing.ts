@@ -63,5 +63,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'produtos',       component: ProdutosComponent },
-    { path: 'marcasx',       component: MarcasComponent },
+    { path: 'marcas',       component: MarcasComponent },
 ];

@@ -20,6 +20,7 @@ namespace ImagineArte.Aplicacao.Produtos
 
         public RespostaPadraoDTO Adicionar(MarcaDTO entidade)
         {
+            ValidarEntidade(entidade);
             var marca = new Marca()
             {
                 Nome = entidade.Nome,
@@ -36,6 +37,7 @@ namespace ImagineArte.Aplicacao.Produtos
 
         public RespostaPadraoDTO Atualizar(MarcaDTO entidade)
         {
+            ValidarEntidade(entidade);
             var marca = _marcaRepositorio.ObterPorId(entidade.Id);
             if (marca == null)
                 return new RespostaPadraoDTO(false, "Marca não encontrada");
@@ -92,6 +94,12 @@ namespace ImagineArte.Aplicacao.Produtos
                 Nome = produto.Nome,
                 UrlLogomarca = produto.UrlLogoMarca
             };
+        }
+
+        private void ValidarEntidade(MarcaDTO marca)
+        {
+            if (string.IsNullOrEmpty(marca.Nome) || string.IsNullOrEmpty(marca.UrlLogomarca))
+                throw new Exception("Campos da marca não preenchido");
         }
     }
 }
