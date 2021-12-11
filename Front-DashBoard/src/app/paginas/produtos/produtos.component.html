@@ -1,19 +1,51 @@
 <div class="main-content">
   <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-12">
-              <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Simple Table</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
-                  </div>
-                  <div class="card-body">
-                    <p>
-                      Vai funcionar carai
-                    </p>
-                  </div>
-              </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Gereciamento de produtos</h4>
+            <p class="card-category">Adicionar, editar e inativas produtos</p>
           </div>
+          <div class="card-body">
+            <div class="table-responsive table-hover">
+              <button mat-raised-button class="btn btn-primary" (click)="adicionarProduto()">
+                Adcionar Produto
+              </button>
+              <hr />
+              <table class="table" style="width: 100%">
+                <thead class="text-primary">
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Ativo</th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let produto of produtos">
+                    <td>
+                      {{ produto.id }}
+                    </td>
+                    <td>
+                      {{ produto.nome }}
+                    </td>
+                    <td>
+                      {{ produto.descricao }}
+                    </td>
+                    <td>
+                      {{ produto.ativo }}
+                    </td>
+                    <td style="float: right">
+                      <button class="btn btn-info" >Editar</button>
+                      <button class="btn btn-warning">Inativar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </div>

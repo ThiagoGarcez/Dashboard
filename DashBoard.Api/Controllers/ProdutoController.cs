@@ -33,6 +33,20 @@ namespace DashBoard.Api.Controllers
             }
         }
 
+        [HttpGet("obterTodosProdutos/")]
+        public ActionResult<List<ProdutoDTO>> ObterTodosProdutos()
+        {
+            try
+            {
+                var produto = _produtoAplicacao.ObterTodosProdutos();
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
         [HttpPost("adicionarProduto/")]
         public ActionResult<RespostaPadraoDTO> AdicionarProduto(ProdutoDTO produto)
         {

@@ -18,6 +18,7 @@ namespace ImagineArte.Infra.EntityFramework
         }
 
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

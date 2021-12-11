@@ -32,13 +32,14 @@ namespace DashBoard.Api
         public void ConfigureServices(IServiceCollection services)
         {
             AdicionarDependencias(services);
-
             services.AddHttpContextAccessor();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DashBoard.Api", Version = "v1" });
             });
+
+            services.AddMvc();
         }
 
         private void AdicionarDependencias(IServiceCollection services)
@@ -48,6 +49,8 @@ namespace DashBoard.Api
 
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<ProdutoAplicacao, ProdutoAplicacao>();
+            services.AddScoped<IMarcaRepositorio, MarcaRepositorio>();
+            services.AddScoped<MarcaAplicacao, MarcaAplicacao>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +65,12 @@ namespace DashBoard.Api
 
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
+            app.UseCors(option =>
+            {
+                option.AllowAnyOrigin();
+                option.AllowAnyMethod();
+                option.AllowAnyHeader();
+            });
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

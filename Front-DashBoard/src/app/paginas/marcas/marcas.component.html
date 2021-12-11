@@ -1,0 +1,43 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Gereciamento de marcas</h4>
+            <p class="card-category">Adicionar, editar e inativar marcas</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive table-hover">
+              <button mat-raised-button class="btn btn-primary" >
+                Adcionar Marca
+              </button>
+              <hr />
+              <table class="table" style="width: 100%">
+                <thead class="text-primary">
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let marca of marcas">
+                    <td>
+                      {{ marca.id }}
+                    </td>
+                    <td>
+                      {{ marca.nome }}
+                    </td>
+                    <td style="float: right">
+                      <button class="btn btn-info" >Editar</button>
+                      <button class="btn btn-warning">Inativar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

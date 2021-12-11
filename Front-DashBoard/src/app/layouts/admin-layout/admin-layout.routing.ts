@@ -9,6 +9,7 @@ import { IconsComponent } from 'app/paginas/icons/icons.component';
 import { MapsComponent } from 'app/paginas/maps/maps.component';
 import { NotificationsComponent } from 'app/paginas/notifications/notifications.component';
 import { ProdutosComponent } from 'app/paginas/produtos/produtos.component';
+import { MarcasComponent } from 'app/paginas/marcas/marcas.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -62,4 +63,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'produtos',       component: ProdutosComponent },
+    { path: 'marcasx',       component: MarcasComponent },
 ];

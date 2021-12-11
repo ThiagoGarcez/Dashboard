@@ -17,6 +17,8 @@ import { MapsComponent } from 'app/paginas/maps/maps.component';
 import { UpgradeComponent } from 'app/paginas/upgrade/upgrade.component';
 import { NotificationsComponent } from 'app/paginas/notifications/notifications.component';
 import { DashboardComponent } from 'app/paginas/dashboard/dashboard.component';
+import { ProdutosComponent } from 'app/paginas/produtos/produtos.component';
+import { MarcasComponent } from 'app/paginas/marcas/marcas.component';
 
 @NgModule({
   imports: [
@@ -40,6 +42,8 @@ import { DashboardComponent } from 'app/paginas/dashboard/dashboard.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    ProdutosComponent,
+    MarcasComponent
   ]
 })
 

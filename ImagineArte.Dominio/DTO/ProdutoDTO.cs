@@ -12,5 +12,11 @@ namespace ImagineArte.Dominio.DTO
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
+        public decimal Comprimento { get; set; }
+        public decimal Largura { get; set; }
+        public decimal Altura { get; set; }
+        public decimal Peso { get; set; }
+        public long MarcaId { get; set; }
+        public long SubcategoriaId { get; set; }
     }
 }

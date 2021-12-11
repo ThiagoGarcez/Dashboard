@@ -24,7 +24,13 @@ namespace ImagineArte.Aplicacao.Produtos
             {
                 Nome = entidade.Nome,
                 Descricao = entidade.Descricao,
-                Ativo = entidade.Ativo
+                Ativo = entidade.Ativo,
+                Altura = entidade.Altura,
+                Comprimento = entidade.Comprimento,
+                Largura = entidade.Largura,
+                MarcaId = entidade.MarcaId,
+                Peso = entidade.Peso,
+                SubcategoriaId = entidade.SubcategoriaId
             };
 
             _repositorioProduto.Adicionar(produto);
@@ -44,6 +50,12 @@ namespace ImagineArte.Aplicacao.Produtos
             produto.Nome = entidade.Nome;
             produto.Descricao = entidade.Descricao;
             produto.Ativo = entidade.Ativo;
+            produto.Altura = entidade.Altura;
+            produto.Comprimento = entidade.Comprimento;
+            produto.Largura = entidade.Largura;
+            produto.MarcaId = entidade.MarcaId;
+            produto.Peso = entidade.Peso;
+            produto.SubcategoriaId = entidade.SubcategoriaId;
 
             _repositorioProduto.Atualizar(produto);
             return new RespostaPadraoDTO()
@@ -82,7 +94,8 @@ namespace ImagineArte.Aplicacao.Produtos
             if (produtos == null || !produtos.Any())
                 return new List<ProdutoDTO>();
 
-            return produtos.Select(produto => ToDTO(produto));
+            return produtos.Select(produto => ToDTO(produto))
+                           .ToList();
         }
 
         private static ProdutoDTO ToDTO(Produto produto)
@@ -92,7 +105,13 @@ namespace ImagineArte.Aplicacao.Produtos
                 Id = produto.Id,
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
-                Ativo = produto.Ativo
+                Ativo = produto.Ativo,
+                Altura = produto.Altura,
+                Comprimento = produto.Comprimento,
+                Largura = produto.Largura,
+                MarcaId = produto.MarcaId,
+                Peso = produto.Peso,
+                SubcategoriaId = produto.SubcategoriaId
             };
         }
     }

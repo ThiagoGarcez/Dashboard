@@ -31,7 +31,7 @@ namespace ImagineArte.Repositorio.Produtos
 
         public Produto ObterPorId(long id)
         {
-            return _dbContext.Produtos.FirstOrDefault();
+            return _dbContext.Produtos.FirstOrDefault(a => a.Id == id);
         }
 
         public IEnumerable<Produto> ObterTodos()
