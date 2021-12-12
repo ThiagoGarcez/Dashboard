@@ -5,6 +5,8 @@ import { MarcaFormService } from "app/modals/marca-form/marca-form.service";
 import { Marca } from "app/models/marca.model";
 import { MarcaService } from "app/services/marca.service";
 import { NotificacaoService } from "app/services/notificacao.service";
+import { SweetAlertService } from "app/services/sweetalert.service";
+import Swal from "sweetalert2";
 
 @Component({
   selector: "app-marcas",
@@ -18,7 +20,8 @@ export class MarcasComponent implements OnInit {
   constructor(
     private marcaService: MarcaService,
     private marcaForm: MarcaFormService,
-    private notificacaoService: NotificacaoService
+    private notificacaoService: NotificacaoService,
+    private sweetAlertService: SweetAlertService
   ) {}
 
   ngOnInit() {
@@ -50,23 +53,33 @@ export class MarcasComponent implements OnInit {
   }
 
   removerMarca(marcaId: number) {
-    this.loading = true;
-    this.marcaService
-      .removerMarca(marcaId)
-      .toPromise()
-      .then(
-        (resposta) => {
-          resposta.sucesso
-            ? this.notificacaoService.mensagemSucesso(resposta.mensagem)
-            : this.notificacaoService.mensagemErro(resposta.mensagem);
-        },
-        (err) => {
-          this.notificacaoService.mensagemErro(err.error);
-        }
-      )
-      .finally(() => {
-        this.obterMarcas();
-        this.loading = false;
-      });
+    this.sweetAlertService.alertaDelete().then((result) => {
+      if (result.isConfirmed) {
+        this.loading = true;
+        this.marcaService
+          .removerMarca(marcaId)
+          .toPromise()
+          .then(
+            (resposta) => {
+              resposta.sucesso
+                ? this.sweetAlertService.alertaSucesso(
+                    "Deletado",
+                    resposta.mensagem
+                  )
+                : this.sweetAlertService.alertaFalha(
+                    "Opss!",
+                    resposta.mensagem
+                  );
+            },
+            (err) => {
+              this.notificacaoService.mensagemErro(err.error);
+            }
+          )
+          .finally(() => {
+            this.obterMarcas();
+            this.loading = false;
+          });
+      }
+    });
   }
 }
