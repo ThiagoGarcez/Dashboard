@@ -19,6 +19,7 @@ namespace ImagineArte.Infra.EntityFramework
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Marca> Marcas { get; set; }
+        public DbSet<Departamento> Departamentos{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,7 +29,6 @@ namespace ImagineArte.Infra.EntityFramework
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
             base.OnModelCreating(builder);
         }
     }

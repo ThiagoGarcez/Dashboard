@@ -34,7 +34,7 @@ namespace DashBoard.Api.Controllers
         }
 
         [HttpGet("obterTodasMarcas/")]
-        public ActionResult<List<ProdutoDTO>> ObterTodasMarcas()
+        public ActionResult<List<MarcaDTO>> ObterTodasMarcas()
         {
             try
             {
