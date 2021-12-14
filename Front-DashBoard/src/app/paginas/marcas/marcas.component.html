@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-header card-header-danger">
             <h4 class="card-title">Gereciamento de marcas</h4>
-            <p class="card-category">Adicionar, editar e inativar marcas</p>
+            <p class="card-category"></p>
           </div>
           <div class="card-body">
             <div class="table-responsive table-hover">
@@ -48,19 +48,9 @@
                       </button>
                       <button
                         class="btn btn-danger"
-                        [swal]="{
-                          title: 'Save file as...',
-                          input: 'text',
-                          showDenyButton: true,
-                          denyButtonText: 'Don\'t save',
-                          showCancelButton: true
-                        }"
-                        (confirm)="removerMarca(marca.id)"
+                        (click)="removerMarca(marca.id)"
                       >
                         Remover
-                      </button>
-                      <button [swal]="['Oops!', 'This is not implemented yet :/', 'warning']">
-                        Do it!
                       </button>
                     </td>
                   </tr>

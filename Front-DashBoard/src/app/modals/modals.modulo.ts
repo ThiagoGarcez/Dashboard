@@ -11,13 +11,15 @@ import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { NgModule } from "@angular/core";
 import { MarcaFormComponent } from "./marca-form/marca-form.component";
+import { DepartamentoFormComponent } from "./departamento-form/departamento-form.component";
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
       ProdutoFormComponent,
-      MarcaFormComponent
+      MarcaFormComponent,
+      DepartamentoFormComponent
   ],
   imports: [
     CommonModule,

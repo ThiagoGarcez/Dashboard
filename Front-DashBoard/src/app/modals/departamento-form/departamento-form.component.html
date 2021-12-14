@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h4 class="modal-title">Departamento</h4>
+  <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <form [formGroup]="departamentoForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" placeholder="Nome do departamento" />
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button
+    *ngIf="btnCancelText"
+    type="button"
+    class="btn btn-danger"
+    (click)="decline()"
+  >
+    {{ btnCancelText }}
+  </button>
+  <button type="button" class="btn btn-success" (click)="accept()">
+    {{ btnOkText }}
+  </button>
+</div>

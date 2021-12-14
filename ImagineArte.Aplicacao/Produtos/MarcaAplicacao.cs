@@ -86,13 +86,13 @@ namespace ImagineArte.Aplicacao.Produtos
                            .ToList();
         }
 
-        private static MarcaDTO ToDTO(Marca produto)
+        private static MarcaDTO ToDTO(Marca marca)
         {
             return new MarcaDTO()
             {
-                Id = produto.Id,
-                Nome = produto.Nome,
-                UrlLogomarca = produto.UrlLogoMarca
+                Id = marca.Id,
+                Nome = marca.Nome,
+                UrlLogomarca = marca.UrlLogoMarca
             };
         }
 
