@@ -15,7 +15,7 @@ export class DepartamentoFormComponent implements OnInit {
 
   @Input() btnOkText: string;
   @Input() btnCancelText: string;
-  @Input() departamentoId: number;
+  @Input() departamentoId: number = 0;
 
   loading: boolean;
   departamentoForm: FormGroup;
@@ -44,7 +44,7 @@ export class DepartamentoFormComponent implements OnInit {
     departamento.id = this.departamentoId;
     departamento.nome = this.departamentoForm.value.nome;
 
-    if (this.departamentoId == 0) this.adicionarDepartamento(departamento);
+    if (this.departamentoId === 0) this.adicionarDepartamento(departamento);
     else this.editarDepartamento(departamento);
   }
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DashBoard.Api.Controllers
+namespace DashBoard.Api.Controllers.Painel.Produto
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,6 +1,8 @@
+using ImagineArte.Aplicacao.Organizacao;
 using ImagineArte.Aplicacao.Produtos;
 using ImagineArte.Infra;
 using ImagineArte.Infra.EntityFramework;
+using ImagineArte.Repositorio.Organizacao;
 using ImagineArte.Repositorio.Produtos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -51,6 +53,8 @@ namespace DashBoard.Api
             services.AddScoped<ProdutoAplicacao, ProdutoAplicacao>();
             services.AddScoped<IMarcaRepositorio, MarcaRepositorio>();
             services.AddScoped<MarcaAplicacao, MarcaAplicacao>();
+            services.AddScoped<IDepartamentoRepositorio, DepartamentoRepositorio>();
+            services.AddScoped<DepartamentoAplicacao, DepartamentoAplicacao>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,9 +11,9 @@ namespace ImagineArte.Aplicacao.Organizacao
 {
     public class DepartamentoAplicacao
     {
-        private readonly DepartamentoRepositorio _departamentoRepositorio;
+        private readonly IDepartamentoRepositorio _departamentoRepositorio;
 
-        public DepartamentoAplicacao(DepartamentoRepositorio departamentoRepositorio)
+        public DepartamentoAplicacao(IDepartamentoRepositorio departamentoRepositorio)
         {
             _departamentoRepositorio = departamentoRepositorio;
         }

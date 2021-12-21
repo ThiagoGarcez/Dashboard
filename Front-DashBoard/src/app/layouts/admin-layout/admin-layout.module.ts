@@ -19,6 +19,7 @@ import { NotificationsComponent } from 'app/paginas/notifications/notifications.
 import { DashboardComponent } from 'app/paginas/dashboard/dashboard.component';
 import { ProdutosComponent } from 'app/paginas/produtos/produtos.component';
 import { MarcasComponent } from 'app/paginas/marcas/marcas.component';
+import { DepartamentoComponent } from 'app/paginas/departamentos/departamentos.component';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { MarcasComponent } from 'app/paginas/marcas/marcas.component';
     NotificationsComponent,
     UpgradeComponent,
     ProdutosComponent,
-    MarcasComponent
+    MarcasComponent,
+    DepartamentoComponent
   ]
 })
 

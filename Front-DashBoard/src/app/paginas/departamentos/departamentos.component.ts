@@ -41,7 +41,7 @@ export class DepartamentoComponent implements OnInit {
     });
   }
 
-  editarMarca(marcaId: number) {
+  editarDepartamento(marcaId: number) {
     this.loading = true;
     this.departamentoForm.abrirModal(marcaId).then((result) => {
       if (result) {
@@ -50,7 +50,7 @@ export class DepartamentoComponent implements OnInit {
     });
   }
 
-  removerMarca(marcaId: number) {
+  removerDepartamento(marcaId: number) {
     this.sweetAlertService.alertaDelete().then((result) => {
       if (result.isConfirmed) {
         this.loading = true;

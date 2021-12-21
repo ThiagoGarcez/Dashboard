@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { SwalComponent } from "@sweetalert2/ngx-sweetalert2";
-import { MarcaFormComponent } from "app/modals/marca-form/marca-form.component";
 import { MarcaFormService } from "app/modals/marca-form/marca-form.service";
 import { Marca } from "app/models/marca.model";
 import { MarcaService } from "app/services/marca.service";
